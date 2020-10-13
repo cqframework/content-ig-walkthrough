@@ -10,6 +10,7 @@ This walkthrough consists of 5 main steps:
 4. **Test Cases**: Adding test cases to test the rule
 5. **Validation**: Validating the content works as expected via the CDS Hooks Sandbox
 
+
 ## Basic Setup
 
 The first step is to get a local [clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) of the walkthrough repository.
