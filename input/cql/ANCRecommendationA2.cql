@@ -76,11 +76,8 @@ define "Hb Concentration":
     ).value
   )
 
-define "Inclusion Criteria":
-  Pregnant
-
 define "Is Recommendation Applicable":
-  "Inclusion Criteria"
+  "Pregnant"
 
 define "Get Card Summary":
   if "Has Anaemia" then

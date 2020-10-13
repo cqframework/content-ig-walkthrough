@@ -97,11 +97,11 @@ needs to happen in order to apply the recommendation as part of a contact with t
 
 > On every contact,
 >   if anaemia detected
->     recommend 120 mg of elemental iron and 2800 &mu;g of folic acid daily (Recommendation A.2.1)
+>     recommend 120 mg of elemental iron and 400 &mu;g of folic acid daily (Recommendation A.2.1)
 >   else
 >     recommend 30 to 60 mg of elemental iron and 400 &mu;g of folic acid, daily (Recommendation A.2.1)
 
-Basically, if the mother has anaemia, recommend 120 mg of elemental iron and 2.8 mg of folic acid daily, otherwise, recommend the standard 30 to 60 mg of elemental iron and 0.4 mg of folic acid daily.
+Basically, if the mother has anaemia, recommend 120 mg of elemental iron and 0.4 mg of folic acid daily, otherwise, recommend the standard 30 to 60 mg of elemental iron and 0.4 mg of folic acid daily.
 
 #### Data Elements
 
@@ -172,7 +172,7 @@ Next, we'll use the estimated due date to calculate a gestational age in weeks:
 
 ```
 define "Gestational Age in Weeks":
-  weeks between ("Estimated Due Date" - 9 months - 7 days) and Today()
+  weeks between ("Estimated Due Date" - 280 days) and Today()
 ```
 
 #### Hemoglobin (Hb) Concentration
