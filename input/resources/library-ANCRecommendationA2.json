@@ -1,0 +1,21 @@
+{
+  "resourceType": "Library",
+  "id": "ANCRecommendationA2",
+  "name": "ANCRecommendationA2",
+  "title": "WHO Antenatal Care Guidelines Recommendation A2 Logic",
+  "status": "active",
+  "experimental": true,
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/codesystem-library-type.html",
+        "code": "logic-library"
+      }
+    ]
+  },
+  "content": [
+    {
+      "id": "ig-loader-ANCRecommendationA2.cql"
+    }
+  ]
+}
