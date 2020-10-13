@@ -4,11 +4,11 @@ This repository provides a walkthrough of building a FHIR content implementation
 
 This walkthrough consists of 5 main steps:
 
-1. **Setup**: Setting up the IG and getting a basic build
-2. **Library**: Including a simple Library for a specific recommendation
-3. **PlanDefinition**: Adding a PlanDefinition to surface the recommendation as a decision support rule
-4. **Test Cases**: Adding test cases to test the rule
-5. **Validation**: Validating the content works as expected via the CDS Hooks Sandbox
+1. [**Setup**](#basic-setup): Setting up the IG and getting a basic build
+2. [**Library**](#adding-a-library): Including a simple Library for a specific recommendation
+3. [**PlanDefinition**](#adding-a-plandefinition): Adding a PlanDefinition to surface the recommendation as a decision support rule
+4. [**Test Cases**](#adding-test-cases): Adding test cases to test the rule
+5. [**Validation**](#validation-with-cqf-ruler-and-cds-hooks): Validating the content works as expected via the CDS Hooks Sandbox
 
 
 ## Basic Setup
