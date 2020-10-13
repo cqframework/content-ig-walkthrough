@@ -1,4 +1,4 @@
-# content-ig-walkthrough
+# Content IG Walkthrough
 
 This repository provides a walkthrough of building a FHIR content implementation guide (content IG). A content IG is a FHIR implementation guide that primarily contains knowledge artifacts such as decision support rules and quality measures. By using the FHIR publication toolchain, these artifacts are made available as FHIR resources, published within websites for documentation and dissemination, and distributed as part of NPM packages for implementation.
 
