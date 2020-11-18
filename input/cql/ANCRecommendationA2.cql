@@ -27,7 +27,7 @@ context Patient
 /*
 On every contact,
   if anaemia detected
-    recommend 120 mg of elemental iron and 2800 &mu;g of folic acid daily (Recommendation A.2.1)
+    recommend 120 mg of elemental iron and 400 &mu;g of folic acid daily (Recommendation A.2.1)
   else
     recommend 30 to 60 mg of elemental iron and 400 &mu;g of folic acid, daily (Recommendation A.2.1)
 
@@ -81,13 +81,13 @@ define "Is Recommendation Applicable":
 
 define "Get Card Summary":
   if "Has Anaemia" then
-    'Recommend 120 mg elemental iron and 2.8 mg folic acid, daily'
+    'Recommend 120 mg elemental iron and 0.4 mg folic acid, daily'
   else
     'Recommend 30-60 mg elemental iron and 0.4 mg folic acid, daily'
 
 define "Get Card Detail":
   if "Has Anaemia" then
-    'Daily elemental iron should be increased to 120 mg and daily folic acid should be increased to 2800 ug (2.8 mg) until her Hb concentration rises to normal'
+    'Daily elemental iron should be increased to 120 mg, and daily dose of 400 ug (0.4 mg) until her Hb concentration rises to normal'
   else
     'Daily elemental iron of between 30m and 60mg, and daily dose of 400 ug (0.4 mg) of folic acid is recommended for pregnant women'
 
