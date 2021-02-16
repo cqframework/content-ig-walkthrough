@@ -36,7 +36,7 @@
 		<condition>
 			<kind value="applicability"/>
 			<expression>
-				<language value="text/cql.identifier"/>
+				<language value="text/cql-identifier"/>
 				<expression value="Is Recommendation Applicable"/>
 			</expression>
 		</condition>
@@ -44,14 +44,14 @@
 		<dynamicValue>
 			<path value="action.description"/>
 			<expression>
-				<language value="text/cql.identifier"/>
+				<language value="text/cql-identifier"/>
 				<expression value="Get Card Detail"/>
 			</expression>
 		</dynamicValue>
 		<dynamicValue>
 			<path value="action.title"/>
 			<expression>
-				<language value="text/cql.identifier"/>
+				<language value="text/cql-identifier"/>
 				<expression value="Get Card Summary"/>
 			</expression>
 		</dynamicValue>
