@@ -271,7 +271,7 @@ Next, we need to express the _condition_, specified using the `action.condition`
 <condition>
   <kind value="applicability"/>
   <expression>
-    <language value="text/cql.identifier"/>
+    <language value="text/cql-identifier"/>
     <expression value="Is Recommendation Applicable"/>
   </expression>
 </condition>
@@ -337,21 +337,21 @@ And then use the `dynamicValue` element of the PlanDefinition to reference these
 <dynamicValue>
   <path value="action.description"/>
   <expression>
-    <language value="text/cql.identifier"/>
+    <language value="text/cql-identifier"/>
     <expression value="Get Card Detail"/>
   </expression>
 </dynamicValue>
 <dynamicValue>
   <path value="action.title"/>
   <expression>
-    <language value="text/cql.identifier"/>
+    <language value="text/cql-identifier"/>
     <expression value="Get Card Summary"/>
   </expression>
 </dynamicValue>
 <dynamicValue>
   <path value="action.extension"/>
   <expression>
-    <language value="text/cql.identifier"/>
+    <language value="text/cql-identifier"/>
     <expression value="Get Card Indicator"/>
   </expression>
 </dynamicValue>
