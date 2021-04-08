@@ -106,12 +106,11 @@
       <code value="path-binary"/>
       <value value="input/cql"/>
     </parameter>
-    <!-- Use this parameter if you want to customize the library narrative template. Leave it commented out to let the publisher generate library narrative
+    <!-- Use this parameter if you want to customize the library narrative template. Leave it commented out to let the publisher generate library narrative -->
     <parameter>
       <code value="path-liquid"/>
       <value value="templates\liquid"/>
     </parameter>
-    -->
 <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
