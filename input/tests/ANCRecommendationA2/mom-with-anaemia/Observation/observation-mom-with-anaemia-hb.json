@@ -38,10 +38,10 @@
     "reference": "Encounter/mom-first-contact"
   },
   "effectivePeriod": {
-    "start": "2020-10-11T15:30:00Z",
-    "end": "2020-10-11T15:30:00Z"
+    "start": "2021-10-11T15:30:00Z",
+    "end": "2021-10-11T15:30:00Z"
   },
-  "issued": "2020-10-11T15:30:00Z",
+  "issued": "2021-10-11T15:30:00Z",
   "performer": [
     {
       "reference": "Practitioner/midwife",

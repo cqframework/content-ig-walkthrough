@@ -14,7 +14,21 @@
   "subject": {
     "reference": "Patient/mom-with-anaemia"
   },
-  "valueDateTime": "2021-04-18",
+  "encounter": {
+    "reference": "Encounter/mom-first-contact"
+  },
+  "effectivePeriod": {
+    "start": "2021-10-11T15:30:00Z",
+    "end": "2021-10-11T15:30:00Z"
+  },
+  "issued": "2021-10-11T15:30:00Z",
+  "performer": [
+    {
+      "reference": "Practitioner/midwife",
+      "display": "Mabel Midwife"
+    }
+  ],
+  "valueDateTime": "2022-04-19",
   "_valueDateTime": {
     "extension": [
       {
