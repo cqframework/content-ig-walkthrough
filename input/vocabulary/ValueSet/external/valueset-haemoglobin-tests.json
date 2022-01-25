@@ -1,28 +1,53 @@
 {
   "resourceType": "ValueSet",
   "id": "haemoglobin-tests",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+  },
+  "extension": [ {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueString": "executable"
+  }, {
+    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+    "valueString": "executable"
+  } ],
   "url": "http://fhir.org/guides/who/anc-cds/ValueSet/haemoglobin-tests",
   "name": "Haemoglobin_Tests",
   "title": "Haemoglobin Tests",
   "status": "active",
-  "expansion": {
-    "timestamp": "2020-04-16T08:10:00.0Z",
-    "contains": [
-      {
-        "system": "http://openmrs.org/concepts",
+  "compose": {
+    "include": [ {
+      "system": "http://openmrs.org/concepts",
+      "concept": [ {
         "code": "1019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "display": "Complete blood count test result (g/dl)"
-      },
-      {
-        "system": "http://openmrs.org/concepts",
+      }, {
         "code": "165395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "display": "Haemoglobin measured from haemoglobinometer (g/dl)"
-      },
-      {
-        "system": "http://openmrs.org/concepts",
+      }, {
         "code": "165396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "display": "Haemoglobin measured from color scale (g/dl)"
-      }
-    ]
+      } ]
+    } ]
+  },
+  "expansion": {
+    "timestamp": "2022-01-25T09:29:06-08:00",
+    "parameter": [ {
+      "name": "naive",
+      "valueBoolean": true
+    } ],
+    "contains": [ {
+      "system": "http://openmrs.org/concepts",
+      "code": "1019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "display": "Complete blood count test result (g/dl)"
+    }, {
+      "system": "http://openmrs.org/concepts",
+      "code": "165395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "display": "Haemoglobin measured from haemoglobinometer (g/dl)"
+    }, {
+      "system": "http://openmrs.org/concepts",
+      "code": "165396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "display": "Haemoglobin measured from color scale (g/dl)"
+    } ]
   }
 }
