@@ -303,7 +303,7 @@ define "Is Recommendation Applicable":
 The PlanDefinition has a reference to the ANCRecommendationA2 library, so that any expression-valued element can refer to the name of an expression deined within that library:
 
 ```
-<library value="http://example.org/fhir/uv/contentig/Library/ANCRecommendationA2"/>
+<library value="http://somewhere.org/fhir/uv/contentig/Library/ANCRecommendationA2"/>
 ```
 
 ### Action
@@ -436,8 +436,11 @@ This returns the service description:
     }
   ]
 }
-```
 
+#WARNING
+If your service is not showing and you are using the CQF Ruler, there is a known bug where CDS PlanDefinition resources added after the discovery endpoint has been called (ever) will not get loaded.  You must post all CDS PlanDefinition resources before discovery is called.  This means if you're loading a CDS PlanDefinition to an instance where discovery has already been called, you must kill the service and start a new one (and reload all the CDS PlanDefinition resources again).
+ 
+```
 Note the [_prefetch templates_](https://cds-hooks.hl7.org/1.0/#prefetch-template) defined in the service; these are inferred directly from the CQL library, based on the [_retrieve_](https://cql.hl7.org/02-authorsguide.html#retrieve) statements.
 
 ### Loading the Patient Data
