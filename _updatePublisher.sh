@@ -1,5 +1,5 @@
 #!/bin/bash
-pubsource=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/
+pubsource=https://github.com/HL7/fhir-ig-publisher/releases/download/1.1.128/
 publisher_jar=publisher.jar
 dlurl=$pubsource$publisher_jar
 
