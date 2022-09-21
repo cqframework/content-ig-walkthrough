@@ -15,6 +15,22 @@ This walkthrough consists of 5 main steps:
 
 The first step is to get a local [clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) of the walkthrough repository.
 
+To open a terminal in VS Code:
+
+***Prerequisites***
+
+- install a `git` client
+
+***Steps***
+
+- In the top menu, click `Terminal`
+- click `New Terminal`
+- in the `Terminal`, run
+
+```bash
+git clone https://github.com/cqframework/content-ig-walkthrough.git
+```
+
 Once you have a local clone, you'll need to build:
 
 ### Dependencies
@@ -63,9 +79,9 @@ NOTE: This walkthrough uses "contentig" as the name of the implementation guide.
 
 The next step in this walkthrough is to build the recommendation logic as expressions of [Clinical Quality Language](http://cql.hl7.org) (CQL). CQL is a high-level, author-friendly language that is used to express clinical reasoning artifacts such as decision support rules, quality measurement population criteria, and public health reporting criteria.
 
-### Atom CQL Support
+### VSCode CQL Support
 
-To validate and test CQL, use the [Atom CQL Plugin](https://github.com/cqframework/atom_cql_support). Follow the instructions there to install the plugin, then open Atom on the root folder of this  content IG walkthrough.
+To validate and test CQL, use the [VSCode CQL Plugin](https://github.com/cqframework/vscode-cql). Follow the instructions there to install the plugin, then open VS Code on the root folder of this  content IG walkthrough.
 
 ### Recommendation A2 - Iron and Folic Acid Supplements
 
@@ -287,7 +303,7 @@ define "Is Recommendation Applicable":
 The PlanDefinition has a reference to the ANCRecommendationA2 library, so that any expression-valued element can refer to the name of an expression deined within that library:
 
 ```
-<library value="http://somewhere.org/fhir/uv/contentig/Library/ANCRecommendationA2"/>
+<library value="http://example.org/fhir/uv/contentig/Library/ANCRecommendationA2"/>
 ```
 
 ### Action
@@ -375,18 +391,31 @@ As a final step in the walkthrough, we'll validate that this content is function
 
 ### Loading the content
 
-Once the IG has been built successfully, the content can be loaded into a CQF Ruler. We need to load:
+Once the IG has been built successfully, the content can be loaded into a CQF Ruler.
+
+We need to load:
 
 1. The [ANCRecommendationA2 Library](http://build.fhir.org/ig/cqframework/content-ig-walkthrough/Library-ANCRecommendationA2.json)
 2. The [ANCRecommendationA2 PlanDefinition](http://build.fhir.org/ig/cqframework/content-ig-walkthrough/PlanDefinition-ANCRecommendationA2.json)
 3. The [Estimated Due Date Method ValueSet](input/vocabulary/ValueSet/external/valueset-edd-method-uv-ips.json)
 4. The [Haemoglobin Tests ValueSet](input/vocabulary/ValueSet/external/valueset-haemoglobin-tests.json)
 
-NOTE: The IPS and WHO ANC value sets are defined in those implementation guides, we have copied them here for ease of reference, and placed them in an `external` folder in the vocabulary. This structure allows the Atom plugin to reference the vocabulary without explicitly publishing them as part of this implementation guide. A better distribution mechanism (currently underway) is to use the NPM package, rather than requiring the value sets to be copied.
+NOTE: The IPS and WHO ANC value sets are defined in those implementation guides, we have copied them here for ease of reference, and placed them in an `external` folder in the vocabulary. This structure allows the VS Code extension to reference the vocabulary without explicitly publishing them as part of this implementation guide. A better distribution mechanism (currently underway) is to use the NPM package, rather than requiring the value sets to be copied.
+
+We can use a REST client VSCode extension to do this.
+
+Prerequisites:
+
+- install the ThunderClient VS Code extension
+
+In the ThunderClient extension:
+
+- Open the `IG Walkthrough` Collection
+- Run all the requests in Setup/Content
 
 Loading these into a running CQF Ruler, you can use the [CDS Hooks Discovery endpoint](https://cds-hooks.hl7.org/1.0/#discovery) to see the ANCRecommendationA2 service:
 
-https://cds-sandbox.alphora.com/cqf-ruler-r4/cds-services
+https://cloud.alphora.com/sandbox/r4/cds/cds-services
 
 This returns the service description:
 
@@ -420,9 +449,16 @@ Next we need to load the Patient data into the sandbox:
 * [Estimated Due Date Observation](input/tests/mom-with-anaemia/Observation/observation-mom-with-anaemia-edd.json)
 * [Haemoglobin Observation](input/tests/mom-with-anaemia/Observation/observation-mom-with-anaemia-hb.json)
 
-These resources can be loaded by PUTing them to the sandbox (be sure to use PUT to preserve the ids), or by using the HAPI FHIR server testing console:
+We can use a REST client VSCode extension to do this.
 
-https://cds-sandbox.alphora.com/cqf-ruler-r4/
+Prerequisites:
+
+- install the ThunderClient VS Code extension
+
+In the ThunderClient extension:
+
+- Open the `IG Walkthrough` Collection
+- Run all the requests in Setup/Test Data
 
 ### Configuring the CDS Hooks Sandbox
 
@@ -432,7 +468,7 @@ http://sandbox.cds-hooks.org/
 
 In the upper right-hand corner of the page, click the settings gear to bring down the settings menu and select `Change FHIR Server`. In the dialog that is displayed, Enter the URL for the CDS Sandbox FHIR server:
 
-https://cds-sandbox.alphora.com/cqf-ruler-r4/fhir
+https://cloud.alphora.com/sandbox/r4/cds/fhir
 
 and then click Next. In the patient dialog that comes up, enter the Patient ID:
 
@@ -442,6 +478,6 @@ and then click Next.
 
 To configure the sandbox to call the ANCRecommendationA2 service, click the settings gear again and select `Add CDS Service`. In the dialog that is displayed, enter the URL for the CDS Sandbox Discovery endpoint:
 
-https://cds-sandbox.alphora.com/cqf-ruler-r4/cds-services
+https://cloud.alphora.com/sandbox/r4/cds/cds-services
 
 and then click Next. The CDS Hooks sandbox will then call that service with the mom-with-anaemia patient, and return the recommendation. To see the request/response, click the Select a Service drop down in the CDS Developer panel and select ANCRecommendationA2. This will display the actual CDS Hooks request that was sent, and the CDS Hooks response that came back.
