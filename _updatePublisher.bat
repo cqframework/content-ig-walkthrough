@@ -139,7 +139,8 @@ IF "%skipPrompts%"=="y" (
 	SET /p updateScripts="Update scripts? (Y/N) "
 )
 IF /I "%updateScripts%"=="Y" (
-	GOTO scripts
+REM	GOTO scripts
+        GOTO end
 )
 GOTO end
 
