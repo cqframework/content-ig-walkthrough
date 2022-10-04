@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "3be2c64b-b1bf-4c21-9851-9c0b3cc5c517",
+    "name": "IG Walkthrough",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-10-04T14:11:30.733Z",
+    "modified": "2022-10-04T14:27:16.095Z",
+    "data": [
+      {
+        "name": "CDSServer",
+        "value": "https://cloud.alphora.com/sandbox/r4/cds/"
+      },
+      {
+        "name": "local (copy to CDSServer)",
+        "value": "http://localhost:8080/"
+      },
+      {
+        "name": "public (copy to CDSServer)",
+        "value": "https://cloud.alphora.com/sandbox/r4/cds/"
+      }
+    ]
+  }
+]
