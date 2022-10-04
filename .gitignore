@@ -21,3 +21,4 @@ Thumbs.db
 ################
 *.bak
 /input-cache
+/thunder-tests/thunderActivity.json

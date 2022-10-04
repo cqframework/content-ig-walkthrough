@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "5a129804-9955-4dad-bdbb-add67383d36d",
+    "colName": "IG Walkthrough",
+    "created": "2022-10-04T14:11:51.064Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "456db7d9-cdc7-4756-adbe-743947b00b38",
+        "name": "Setup",
+        "containerId": "",
+        "created": "2022-10-04T14:11:51.075Z",
+        "sortNum": 10000,
+        "settings": {}
+      },
+      {
+        "_id": "17316d3b-b1e5-49dc-9e83-ed1596b72c25",
+        "name": "Content",
+        "containerId": "456db7d9-cdc7-4756-adbe-743947b00b38",
+        "created": "2022-10-04T14:11:51.076Z",
+        "sortNum": 30000
+      },
+      {
+        "_id": "dab14ea6-9f79-4323-afee-277497f1e52f",
+        "name": "Test Data",
+        "containerId": "456db7d9-cdc7-4756-adbe-743947b00b38",
+        "created": "2022-10-04T14:11:51.077Z",
+        "sortNum": 40000,
+        "settings": {}
+      }
+    ],
+    "settings": {
+      "headers": [],
+      "tests": [],
+      "envId": "3be2c64b-b1bf-4c21-9851-9c0b3cc5c517"
+    }
+  }
+]
