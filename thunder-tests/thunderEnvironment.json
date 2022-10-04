@@ -5,18 +5,18 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-10-04T14:11:30.733Z",
-    "modified": "2022-10-04T14:16:51.982Z",
+    "modified": "2022-10-04T14:27:16.095Z",
     "data": [
       {
         "name": "CDSServer",
         "value": "https://cloud.alphora.com/sandbox/r4/cds/"
       },
       {
-        "name": "local for copy to CDSServer",
+        "name": "local (copy to CDSServer)",
         "value": "http://localhost:8080/"
       },
       {
-        "name": "public for copy CDSServer",
+        "name": "public (copy to CDSServer)",
         "value": "https://cloud.alphora.com/sandbox/r4/cds/"
       }
     ]
