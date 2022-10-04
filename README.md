@@ -77,11 +77,11 @@ NOTE: This walkthrough uses "contentig" as the name of the implementation guide.
 
 ## Adding a Library
 
-The next step in this walkthrough is to build the recommendation logic as expressions of [Clinical Quality Language](http://cql.hl7.org) (CQL). CQL is a high-level, author-friendly language that is used to express clinical reasoning artifacts such as decision support rules, quality measurement population criteria, and public health reporting criteria.
+The next step in this walkthrough is to build the recommendation logic as expressions of [Clinical Quality Language](http://cql.hl7.org) (CQL). CQL is a high-level, author-friendly language that is used to express the logic used in clinical reasoning artifacts such as decision support rules, quality measurement population criteria, and public health reporting criteria.
 
 ### VSCode CQL Support
 
-To validate and test CQL, use the [VSCode CQL Plugin](https://github.com/cqframework/vscode-cql). Follow the instructions there to install the plugin, then open VS Code on the root folder of this  content IG walkthrough.
+To validate and test CQL, use the [VSCode CQL Plugin](https://github.com/cqframework/vscode-cql). Follow the instructions there to install the plugin, then open VS Code on the root folder of this content IG walkthrough.
 
 ### Recommendation A2 - Iron and Folic Acid Supplements
 
@@ -156,7 +156,7 @@ define "Pregnancy Status":
       [Observation: "Pregnancy status"] O
         where O.status = 'final'
           and O.issued 1 year or less before Today()
-        sort by FHIRHelpers.ToDateTime(effective as FHIR.dateTime)
+        sort by effective.value
     ).value
   )
 ```

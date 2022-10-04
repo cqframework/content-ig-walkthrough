@@ -18,17 +18,17 @@
     "reference": "Encounter/mom-first-contact"
   },
   "effectivePeriod": {
-    "start": "2021-10-11T15:30:00Z",
-    "end": "2021-10-11T15:30:00Z"
+    "start": "2022-10-02T15:30:00Z",
+    "end": "2022-10-02T15:30:00Z"
   },
-  "issued": "2021-10-11T15:30:00Z",
+  "issued": "2022-10-02T15:30:00Z",
   "performer": [
     {
       "reference": "Practitioner/midwife",
       "display": "Mabel Midwife"
     }
   ],
-  "valueDateTime": "2022-04-19",
+  "valueDateTime": "2023-04-10",
   "_valueDateTime": {
     "extension": [
       {
