@@ -407,6 +407,7 @@ We can use a REST client VSCode extension to do this.
 Prerequisites:
 
 - install the ThunderClient VS Code extension
+- In the VS Code ThunderClient extension settings, enable `Thunder-client: Save To Workspace`. This allows ThunderClient to list all the requests in the current workspace.
 
 In the ThunderClient extension:
 
